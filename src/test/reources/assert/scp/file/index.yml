@@ -1,0 +1,5 @@
+- name: dir test
+  hosts: local
+  tasks:
+    - name: say_hello
+      shell: echo 'hello ansible'
