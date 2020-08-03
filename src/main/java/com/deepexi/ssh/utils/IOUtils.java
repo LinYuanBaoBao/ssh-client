@@ -21,7 +21,7 @@ public class IOUtils {
      * @param inputStream    外部对象输出的IO流
      * @param lineHandler    处理带行号的行数据方法
      * @param endCondition   外部对象执行结束的方法
-     * @param isNonEndMethod endCondition 不是外部对象执行结束的方法   ChannelExec.isClosed() -> false  Process.isAlive() -> true
+     * @param isNonEndMethod endCondition 不是外部对象执行结束的方法
      * @param timeoutCheck   timeout判断
      * @throws IOException IO异常
      */
@@ -45,6 +45,13 @@ public class IOUtils {
 
     }
 
+    /**
+     *
+     * @param inputStream
+     * @param lineHandler
+     * @param lineNum
+     * @throws IOException
+     */
     public static void read(InputStream inputStream, LineHandler lineHandler, int lineNum) throws IOException {
         // todo:: list<byte> 浪费空间
         int available = inputStream.available();
@@ -81,6 +88,11 @@ public class IOUtils {
         }
     }
 
+    /**
+     *
+     * @param bytes
+     * @return
+     */
     public static byte[] getBytes(List<Byte> bytes) {
         if (bytes.size() > 1) {
             int last = bytes.size() - 1;
@@ -95,6 +107,12 @@ public class IOUtils {
         return bs;
     }
 
+    /**
+     *
+     * @param lineHandler
+     * @param lineNum
+     * @param bs
+     */
     public static void doLineHandler(LineHandler lineHandler, int lineNum, byte[] bs) {
         String line = new String(bs, StandardCharsets.UTF_8);
         while (line.length() > 1000) {

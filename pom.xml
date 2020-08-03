@@ -7,6 +7,9 @@
     <groupId>com.github.LinYuanBaoBao</groupId>
     <artifactId>ssh-client</artifactId>
     <version>1.0.0-RELEASE</version>
+    <name>ssh-client</name>
+    <description>ssh-client support connect to a remote host to execute commands</description>
+    <url>https://github.com/LinYuanBaoBao/ssh-client</url>
 
     <dependencies>
         <dependency>
@@ -101,6 +104,14 @@
         <connection>https://github.com/LinYuanBaoBao/ssh-client.git</connection>
         <developerConnection>https://github.com/LinYuanBaoBao</developerConnection>
     </scm>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
     <developers>
         <developer>
