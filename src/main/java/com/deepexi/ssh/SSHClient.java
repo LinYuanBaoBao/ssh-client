@@ -286,44 +286,6 @@ public class SSHClient {
         private boolean strictHostKeyChecking = false;
         private int execTimeout = 10000;
 
-//        public Builder host(String host) {
-//            this.host = host;
-//            return this;
-//        }
-//
-//        public Builder port(int port) {
-//            this.port = port;
-//            return this;
-//        }
-//
-//        public Builder username(String username) {
-//            this.username = username;
-//            return this;
-//        }
-//
-//        public Builder password(String password) {
-//            this.password = password;
-//            return this;
-//        }
-//
-//        public Builder execTimeout(int execTimeout) {
-//            this.execTimeout = execTimeout;
-//            return this;
-//        }
-//
-//        public void privateKey(String privateKey) {
-//            this.privateKey = privateKey;
-//        }
-//
-//        public void jumpHost(JumpHost jumpHost) {
-//            this.jumpHost = jumpHost;
-//        }
-//
-//        public Builder strictHostKeyChecking(boolean check) {
-//            this.strictHostKeyChecking = check;
-//            return this;
-//        }
-
         public SSHClient build() {
             SSHClient ssh = new SSHClient();
             ssh.jSch = new JSch();

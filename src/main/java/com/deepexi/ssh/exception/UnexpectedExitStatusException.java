@@ -4,6 +4,7 @@ import java.util.List;
 
 /**
  * 错误退出码异常
+ *
  * @author linyuan - linyuan@deepexi.com
  * @since 2020/8/2
  */
